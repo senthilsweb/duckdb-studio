@@ -35,10 +35,8 @@ export default defineNuxtConfig({
   ],
   runtimeConfig: {
     public: {
-      API_BASE_URL: process.env.API_BASE_URL || "",
-      CONFIG_BASE_URL: process.env.CONFIG_BASE_URL || "",
       LOGO_WEB: process.env.LOGO_WEB || 'logo.svg',
-      API_GATEWAY_BASE_URL: process.env.API_GATEWAY_BASE_URL || '',
+      LOGO_mobile: process.env.LOGO_WEB || 'logo.svg',
       DUCKDB_DATA_API_BASE_PATH: process.env.DUCKDB_DATA_API_BASE_PATH || '',
     },
   },
