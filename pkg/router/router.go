@@ -4,8 +4,6 @@ import (
 	"io"
 	"log"
 	"os"
-	"templrjs/pkg/config"
-	"templrjs/pkg/duckdb"
 	"templrjs/pkg/middleware"
 
 	"github.com/gin-gonic/gin"
@@ -16,9 +14,8 @@ func Setup() *gin.Engine {
 	r := gin.New()
 
 	// Logging to a file.
-	f, _ := os.Create("./logs/templrjs-core.log")
+	f, _ := os.Create("./logs/core.log")
 	gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
-	log.Println("Application Name = [" + config.Config.Database.Dbname + "]")
 
 	log.Println("Bootstrapping gin middlewares")
 	// Middlewares
@@ -28,13 +25,6 @@ func Setup() *gin.Engine {
 	r.Use(middleware.GinContextToContextMiddleware())
 
 	log.Println("Setting up routes")
-
-	r.POST("/entities/:entity", duckdb.CreateEntity)
-	r.GET("/entities/:entity", duckdb.GetEntities)
-	r.PUT("/entities/:entity/:id", duckdb.UpdateEntity)
-	r.DELETE("/entities/:entity/:id", duckdb.DeleteEntity)
-	r.POST("/execute-query", duckdb.ExecuteCustomQuery)
-
 	log.Println("Finished router setup")
 	return r
 }
