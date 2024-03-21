@@ -37,7 +37,7 @@ export default defineNuxtConfig({
     public: {
       LOGO_WEB: process.env.LOGO_WEB || 'logo.svg',
       LOGO_mobile: process.env.LOGO_WEB || 'logo.svg',
-      DUCKDB_DATA_API_BASE_PATH: process.env.DUCKDB_DATA_API_BASE_PATH || '',
+      DUCKDB_DATA_API_BASE_PATH: 'process.env.DUCKDB_DATA_API_BASE_PATH' || 'https://duckdb-data-api.vercel.app',
     },
   },
   modules: [
