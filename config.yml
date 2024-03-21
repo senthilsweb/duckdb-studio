@@ -1,0 +1,9 @@
+
+# These will be used when the web server is started. e.g. 
+# `./templarjs -p 8080 -e prod -s embed` or `./templarjs -p 8080 -e prod -s fs -d ./dist -i index.html`
+server:
+  port: "8080"
+  env: "prod"
+  web_source: "embed" # or "fs"
+  web_dir: "" # if web_source is "fs" then specify the path to the web directory e.g. "./dist"
+  index_file: "" # if web_source is "fs" then specify the index file name e.g. "index.html"

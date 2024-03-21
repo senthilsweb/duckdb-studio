@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="400"
+   height="100"
+   viewBox="0 0 105.83333 26.458333"
+   version="1.1"
+   id="svg15258"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="web-logo-nospace-400x100.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview15260"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="3.3720903"
+     inkscape:cx="193.79671"
+     inkscape:cy="50.117282"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs15255" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g351"
+       transform="translate(1.7108541)">
+      <g
+         id="g15485"
+         transform="translate(0.18637677)">
+        <g
+           id="g14981"
+           transform="matrix(1.4676354,0,0,1.4674998,-35.013142,-10.708839)"
+           style="stroke-width:0.681399">
+          <path
+             style="fill:none;stroke:#004aad;stroke-width:0.51105;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+             d="M 30.072122,16.134665 V 9.0091889 c 0,-0.28596 0.330749,-0.5979195 0.619461,-0.5995997 l 2.659473,-0.015474 c 0,0 1.308998,-0.018963 1.451494,0.02945 0.196235,0.066628 0.399491,0.1929642 0.492754,0.3764924 0.04867,0.095779 0.03428,1.5905424 0.03428,1.5905424 l 0.008,0.626582"
+             id="path8134"
+             sodipodi:nodetypes="csscsscc" />
+          <path
+             style="fill:none;stroke:#004aad;stroke-width:0.51105;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+             d="m 32.652372,18.961482 h -7.194195 c -0.288717,0 -0.603685,-0.32759 -0.605382,-0.613545 l -0.01562,-2.634069 c 0,0 -0.01915,-1.296494 0.02974,-1.43763 0.06727,-0.19436 0.194825,-0.395674 0.380123,-0.488047 0.0967,-0.0482 1.605882,-0.03395 1.605882,-0.03395 l 0.632625,-0.0079"
+             id="path9600"
+             sodipodi:nodetypes="csscsscc" />
+          <path
+             style="fill:none;stroke:#545454;stroke-width:0.51105;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+             d="m 35.337507,16.489543 v 7.125476 c 0,0.28596 -0.330749,0.59792 -0.619462,0.5996 l -2.659472,0.01547 c 0,0 -1.308998,0.01896 -1.451495,-0.02945 -0.196234,-0.06663 -0.39949,-0.192964 -0.492753,-0.376492 -0.04867,-0.09578 -0.03428,-1.590543 -0.03428,-1.590543 l -0.008,-0.626582"
+             id="path9602"
+             sodipodi:nodetypes="csscsscc" />
+          <path
+             style="fill:none;stroke:#545454;stroke-width:0.51105;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+             d="m 32.757257,13.690615 h 7.194194 c 0.288718,0 0.603686,0.327589 0.605383,0.613544 l 0.01562,2.63407 c 0,0 0.01915,1.296494 -0.02974,1.437629 -0.06727,0.19436 -0.194825,0.395675 -0.380123,0.488047 -0.0967,0.0482 -1.605883,0.03396 -1.605883,0.03396 l -0.632624,0.0079"
+             id="path9604"
+             sodipodi:nodetypes="csscsscc" />
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:8.46667px;line-height:1.8;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light';letter-spacing:0.865337px;fill:#004aad;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+           x="26.548756"
+           y="16.243441"
+           id="text9619"
+           transform="scale(1.0048105,0.99521254)"><tspan
+             sodipodi:role="line"
+             id="tspan9617"
+             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:8.46667px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Light';fill:#004aad;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+             x="26.548756"
+             y="16.243441">HEALTHBUDDY</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

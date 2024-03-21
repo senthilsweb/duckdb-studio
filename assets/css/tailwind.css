@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/hey-august");
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+@layer base {
+    button,.button,input[type='button'],input[type='reset'],input[type='submit'] {
+      @apply bg-primary-500;
+    }
+  }
+
+  @font-face {
+    font-family: 'Norwester';
+    src: url('~/assets/fonts/Hey-August.otf')  format('opentype'),
+}
