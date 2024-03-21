@@ -18,7 +18,7 @@
                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <!-- Search icon -->
                 </div>
-                <input type="text" name="table-search" id="table-search" class="h-8 block sm:text-sm w-full pl-10 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="Search tables..." />
+                <input type="text" name="table-search" id="table-search" class="h-8 block w-full border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Search tables..." />
               </div>
             </li>
           </ul>
@@ -66,9 +66,9 @@
 
               <!-- Action Buttons -->
               <footer class="flex justify-end gap-x-2 relative">
-                <button @click="execute" class="absolute bottom-0 left-[45%] rounded-full bg-teal-100 hover:bg-teal-200 p-2 text-white z-40 h-10 w-10 transform -translate-x-1/2 translate-y-1/2 p-2 rounded-full z-10" title="Execute SQL code">
+                <button @click="execute" class="absolute bottom-0 left-[45%] rounded-full bg-indigo-100 hover:bg-indigo-200 p-2 text-white z-40 h-10 w-10 transform -translate-x-1/2 translate-y-1/2 p-2 rounded-full z-10" title="Execute SQL code">
                   <span class="absolute inset-0 flex h-full w-full items-center justify-center" aria-hidden="true">
-                    <Icon name="icon-park-twotone:play" class="w-10 h-10 text-green-600" aria-label="Execute" />
+                    <Icon name="icon-park-twotone:play" class="w-10 h-10 text-indigo-600" aria-label="Execute" />
                   </span>
                 </button>
               </footer>
