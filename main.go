@@ -14,8 +14,6 @@ import (
 	"runtime"
 	"strconv"
 
-	"templrjs/pkg/config"
-	"templrjs/pkg/duckdb"
 	"templrjs/pkg/router"
 
 	"github.com/gin-contrib/cors" // Add this line to your existing imports
@@ -41,10 +39,6 @@ func init() {
 	initLogger()
 	log.Info("Initialized Logger")
 
-	log.Info("Initialize Configuration")
-	config.Setup()
-	log.Info("Initialized Configuration")
-
 	log.Info("Initialize command line args")
 	flag.IntVar(&flagPort, "p", 8080, "port number for the api server")
 	flag.StringVar(&flagStaticDirPath, "d", "./dist", "Website directory path")
@@ -52,12 +46,6 @@ func init() {
 	flag.StringVar(&flagEnv, "e", "dev", "Development or Production stage")
 	flag.StringVar(&flagSource, "s", "embed", "Host site from embedded source or local filesystem")
 	log.Info("Initialized command line args")
-
-	//database.Setup()
-	log.Info("Initialize DuckDB")
-	duckdb.Setup()
-	log.Info("Initialized DuckDB")
-	//broker.Setup()
 
 	log.Info("Application init function end.")
 }
@@ -105,12 +93,6 @@ func initLogger() {
 		"Arch":            runtime.GOARCH,
 	}).Info("Application Initializing")
 
-	/*if stage == "Dev" {
-		log.SetFormatter(&log.TextFormatter{ForceColors: true, FullTimestamp: true, TimestampFormat: time.RFC1123Z})
-	} else {
-		//log.SetFormatter(&log.JSONFormatter{})
-		log.SetFormatter(&log.TextFormatter{ForceColors: true, FullTimestamp: true, TimestampFormat: time.RFC1123Z})
-	}*/
 }
 
 func Assets() (fs.FS, error) {
@@ -136,14 +118,10 @@ func startServer() {
 	} else {
 		log.Info("Serving from local filesystem")
 		r.GET("/", func(c *gin.Context) { c.File("./dist/index.html") })
-		r.GET("/resume", func(c *gin.Context) { c.File("./dist/resume/index.html") })
-		r.GET("/cms", func(c *gin.Context) { c.File("./dist/cms/index.html") })
-		r.GET("/aboutme", func(c *gin.Context) { c.File("./dist/cms/index.html") })
 		r.GET("/sql-ide", func(c *gin.Context) { c.File("./dist/sql-ide/index.html") })
 		r.Static("/_nuxt", "./dist/_nuxt")
 		r.StaticFile("/favicon.ico", "./dist/favicon.ico")
 		r.StaticFile("/logo.svg", "./dist/logo.svg")
-		r.Static("/configs", "./dist/configs")
 	}
 
 	//log.Fatal(http.ListenAndServe(":"+port, a.Negroni))
