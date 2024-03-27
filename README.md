@@ -69,10 +69,11 @@ npm start
 
 ## To-Do Items
 
-[ ] Automatic online API documentation for tables/entities.
-[ ] Integrate SQLGlot for query transpilation to multiple data sources.
-[ ] Develop an SQL Query Optimizer.
-[ ] Implement features for enhanced data lineage insights.
+- [ ] Automatic online API documentation for tables/entities.
+- [ ] Integrate SQLGlot for query transpilation to multiple data sources.
+- [ ] Develop an SQL Query Optimizer.
+- [ ] Implement features for enhanced data lineage insights.
+- [ ] Go binary for packing the app as appliance
 
 
 
