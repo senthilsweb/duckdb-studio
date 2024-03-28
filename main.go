@@ -16,7 +16,7 @@ import (
 
 	"templrjs/pkg/router"
 
-	"github.com/gin-contrib/cors" // Add this line to your existing imports
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 
 	"github.com/natefinch/lumberjack"
@@ -41,7 +41,7 @@ func init() {
 
 	log.Info("Initialize command line args")
 	flag.IntVar(&flagPort, "p", 8080, "port number for the api server")
-	flag.StringVar(&flagStaticDirPath, "d", "./dist", "Website directory path")
+	flag.StringVar(&flagStaticDirPath, "d", "./.dist", "Website directory path") // Updated to reflect .dist directory
 	flag.StringVar(&flagIndexFileName, "f", "index.html", "Index document")
 	flag.StringVar(&flagEnv, "e", "dev", "Development or Production stage")
 	flag.StringVar(&flagSource, "s", "embed", "Host site from embedded source or local filesystem")
@@ -50,7 +50,7 @@ func init() {
 	log.Info("Application init function end.")
 }
 
-//go:embed all:dist
+//go:embed all:.dist
 var content embed.FS
 
 func main() {
@@ -62,10 +62,9 @@ func main() {
 }
 
 func initLogger() {
-	//logfilepath := AppExecutionPath() + "/logs/" + "templrjs.log"
 	logfilepath := AppExecutionPath() + "/" + os.Args[0] + ".log"
 	log.Info("logfilepath = " + logfilepath)
-	// Set the Lumberjack logger
+
 	ljack := &lumberjack.Logger{
 		Filename:   logfilepath,
 		MaxSize:    1,
@@ -74,12 +73,6 @@ func initLogger() {
 		LocalTime:  true,
 	}
 
-	//log := logrus.New()
-	//
-	// Output to stdout instead of the default stderr
-	// Can be any io.Writer, see below for File example
-
-	// Only log the warning severity or above.
 	log.SetLevel(log.InfoLevel)
 
 	mWriter := io.MultiWriter(os.Stdout, ljack)
@@ -96,20 +89,20 @@ func initLogger() {
 }
 
 func Assets() (fs.FS, error) {
-	return fs.Sub(content, "dist")
+	return fs.Sub(content, ".dist") // Updated to match .dist directory
 }
 
 func startServer() {
 
 	r := router.Setup()
 	config := cors.DefaultConfig()
-	config.AllowOrigins = []string{"*", "http://localhost:3000"} // Allow all origins
+	config.AllowOrigins = []string{"*", "http://localhost:3000"}
 	config.AllowHeaders = []string{"Origin", "Content-Type"}
 	r.Use(cors.New(config))
 
 	if strings.ToLower(flagSource) == "embed" {
 		assets, _ := Assets()
-		// Use the WrapH function to wrap the http.StripPrefix handler
+
 		r.Use(func(c *gin.Context) {
 			fs := http.StripPrefix("/", http.FileServer(http.FS(assets)))
 			fs.ServeHTTP(c.Writer, c.Request)
@@ -117,14 +110,13 @@ func startServer() {
 		})
 	} else {
 		log.Info("Serving from local filesystem")
-		r.GET("/", func(c *gin.Context) { c.File("./dist/index.html") })
-		r.GET("/sql-ide", func(c *gin.Context) { c.File("./dist/sql-ide/index.html") })
-		r.Static("/_nuxt", "./dist/_nuxt")
-		r.StaticFile("/favicon.ico", "./dist/favicon.ico")
-		r.StaticFile("/logo.svg", "./dist/logo.svg")
+		r.GET("/", func(c *gin.Context) { c.File("./.dist/index.html") })                // Updated paths to match .dist directory
+		r.GET("/sql-ide", func(c *gin.Context) { c.File("./.dist/sql-ide/index.html") }) // Updated paths
+		r.Static("/_nuxt", "./.dist/_nuxt")                                              // Updated paths
+		r.StaticFile("/favicon.ico", "./.dist/favicon.ico")                              // Updated paths
+		r.StaticFile("/logo.svg", "./.dist/logo.svg")                                    // Updated paths
 	}
 
-	//log.Fatal(http.ListenAndServe(":"+port, a.Negroni))
 	listener, err := net.Listen("tcp", ":"+strconv.Itoa(flagPort))
 	if err != nil {
 		log.Error(err)
@@ -137,7 +129,6 @@ func startServer() {
 	<-done
 }
 
-// AppExecutionPath returns the relative path where the application is executing
 func AppExecutionPath() string {
 	mydir, err := os.Getwd()
 	if err != nil {

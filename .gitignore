@@ -135,7 +135,8 @@ dist
 .tern-port
 .vercel
 
-.output
+.output/
 .env
-.nuxt
+.nuxt/
+.release/
 
