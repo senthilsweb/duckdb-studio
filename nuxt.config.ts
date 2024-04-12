@@ -5,8 +5,8 @@ export default defineNuxtConfig({
     pageTransition: { name: "page", mode: "out-in" },
     layoutTransition: { name: "layout", mode: "out-in" },
   },
-  ssr: false,
-  sourcemap: false,
+  //ssr: false,
+  //sourcemap: false,
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
     configPath: "tailwind.config",
@@ -38,6 +38,8 @@ export default defineNuxtConfig({
       LOGO_WEB: process.env.LOGO_WEB || 'logo.svg',
       LOGO_mobile: process.env.LOGO_WEB || 'logo.svg',
       DUCKDB_DATA_API_BASE_PATH: 'process.env.DUCKDB_DATA_API_BASE_PATH' || 'https://duckdb-data-api.vercel.app',
+      CLOUDINARY_BASE_URL: 'process.env.CLOUDINARY_BASE_URL' || '',
+      CLOUDINARY_PUBLIC_ID:'v1711924071/senthilsweb-scl-card-template_cyxogj.webp' || ''
     },
   },
   modules: [
@@ -60,6 +62,6 @@ export default defineNuxtConfig({
     enabled: true,
   },
   content: {
-    documentDriven: true,
+    documentDriven: false,
   }
 });

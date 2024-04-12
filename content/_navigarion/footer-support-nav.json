@@ -1,0 +1,58 @@
+{
+    "menu": [
+        {
+            "name": "Notification",
+            "description": "Single sign-on configuration",
+            "href": "javascript:void()",
+            "click_event": "noops",
+            "icon": "heroicons:bell-20-solid",
+            "iconForeground": "text-primary-700",
+            "iconBackground": "bg-primary-50"
+        },
+        {
+            "name": "Audit histoty",
+            "description": "Audit logs",
+            "href": "javascript:void()",
+            "click_event": "noops",
+            "icon": "icon-park-outline:history",
+            "iconForeground": "text-primary-700",
+            "iconBackground": "bg-primary-50"
+        },
+        {
+            "name": "FAQ",
+            "description": "Frequently asked question",
+            "href": "/faq",
+            "click_event": "noops",
+            "icon": "heroicons:question-mark-circle",
+            "iconForeground": "text-primary-700",
+            "iconBackground": "bg-primary-50"
+        },
+        {
+            "name": "Support",
+            "description": "Customer support",
+            "href": "/customer-support",
+            "click_event": "noops",
+            "icon": "icon-park-outline:headset-one",
+            "iconForeground": "text-primary-700",
+            "iconBackground": "bg-primary-50"
+        },
+        {
+            "name": "Documentation",
+            "description": "Documentation",
+            "href": "/docs/getting-started",
+            "click_event": "noops",
+            "icon": "icon-park-twotone:book-open",
+            "iconForeground": "text-primary-700",
+            "iconBackground": "bg-primary-50"
+        },
+        {
+            "name": "Info",
+            "description": "Users in your organization i.e. Employees",
+            "href": "javascript:void()",
+            "click_event": "evtAboutZynomi",
+            "icon": "icon-park-twotone:info",
+            "iconForeground": "text-primary-700",
+            "iconBackground": "bg-primary-50"
+        }
+    ]
+}

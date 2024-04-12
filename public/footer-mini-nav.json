@@ -1,0 +1,64 @@
+{
+    "menu": [
+        {
+            "name": "Audit histoty",
+            "description": "Audit logs",
+            "href": "javascript:void()",
+            "click_event": "noops",
+            "icon": "icon-park-outline:history",
+            "iconForeground": "text-primary-700",
+            "iconBackground": "bg-primary-50",
+            "enabled":false
+        },
+        {
+            "name": "FAQ",
+            "description": "Frequently asked question",
+            "href": "/faq",
+            "click_event": "noops",
+            "icon": "heroicons:question-mark-circle",
+            "iconForeground": "text-primary-700",
+            "iconBackground": "bg-primary-50",
+            "enabled":false
+        },
+        {
+            "name": "Support",
+            "description": "Customer support",
+            "href": "/customer-support",
+            "click_event": "noops",
+            "icon": "icon-park-outline:headset-one",
+            "iconForeground": "text-primary-700",
+            "iconBackground": "bg-primary-50",
+            "enabled":false
+        },
+        {
+            "name": "Documentation",
+            "description": "Documentation",
+            "href": "#",
+            "click_event": "evtSideBarGuide",
+            "icon": "icon-park-twotone:book-open",
+            "iconForeground": "text-primary-700",
+            "iconBackground": "bg-primary-50",
+            "enabled":false
+        },
+        {
+            "name": "Settings",
+            "description": "Settings",
+            "href": "javascript:void()",
+            "click_event": "noops",
+            "icon": "icon-park-twotone:setting-two", 
+            "iconForeground": "text-primary-700",
+            "iconBackground": "bg-primary-50",
+            "enabled":true
+        },
+        {
+            "name": "Info",
+            "description": "Users in your organization i.e. Employees",
+            "href": "javascript:void()",
+            "click_event": "evtAboutTemplrJS",
+            "icon": "icon-park-twotone:info",
+            "iconForeground": "text-primary-700",
+            "iconBackground": "bg-primary-50",
+            "enabled":true
+        }
+    ]
+}
